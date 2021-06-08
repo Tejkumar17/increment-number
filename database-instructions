@@ -1,0 +1,22 @@
+--- Create a user (if not already created) and grant all priveleges ---
+
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;
+
+--- Create database increment ---
+
+CREATE DATABASE increment;
+grant all on increment.* to 'user'@'localhost';
+
+-- Create table number ---
+
+CREATE TABLE `number` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `counter` int(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+--- Query to see the results.---
+
+select * from number;
