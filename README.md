@@ -1,4 +1,4 @@
-# concurrent-increment
+# increment-number
 
 ## Task
 
